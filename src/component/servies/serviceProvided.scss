@@ -1,0 +1,140 @@
+@use '../../assets/style/colors.scss' as *;
+@use '../../assets/style/mixing.scss' as *;
+
+.serviceprovidrd-container{
+    width: 100%;
+    padding: 100px 0px;
+    .serviceProvided{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       // background-color: aqua;
+        gap: 10px;
+        .heading{
+            width: 80%;
+           
+             height: 200px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         
+             flex-direction: column;
+            //background-color: aliceblue;
+            span{
+                letter-spacing: 1px;
+                font-size: 16px;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 2px;
+                    height: 100px;
+                    background-color: black;
+                    position: absolute;
+                    top: -550%;
+                    left: 50%;
+                }
+            }
+            h1{
+                font-size: 50px;
+                text-transform: capitalize;
+                margin-top: 10px;
+                @include tableView{
+                    font-size: 40px;
+                     
+                 }
+                 @include moblePhoneView{
+                    font-size: 30px;
+                 }
+            }
+            .textin{
+                opacity: 0;
+                transform: translateX(-220px);
+                transition: all 1s;
+            }
+            .textup{
+                opacity: 1;
+                transform: translateX(0px);
+                
+
+            }
+           
+
+        }
+        .my-services{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+              flex-wrap: wrap;
+            gap: 10px;
+            //background-color: aliceblue;
+           
+            .items{
+                border: 1px solid rgba(0, 0, 0, 0.247);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-direction: column;
+                width: calc(80%/3);
+                padding: 10px;
+                @include tableView{
+                    width: calc(80%/2);
+                }
+                @include moblePhoneView{
+                    width: 80%;
+
+                }
+                &:hover{
+                    border: 1px solid rgba(156, 6, 202, 0.856);
+
+                }
+                img{
+                    width: 200px;
+                    height: 200px;
+                    @include tableView{
+                        width: 150px;
+                        height: 150px;
+                        
+                    }
+                }
+                h1{
+                    max-width: 300px;
+                    text-transform: capitalize;
+                    @include tableView{
+                       font-size: 25px;
+                        
+                    }
+
+                }
+                p{
+                    max-width: 300px;
+                    line-height: 23px;
+                    color: $textColor;
+                    font-size: 16px;
+                    font-weight: 400;
+                   
+                }
+            }
+            
+
+
+        }
+       
+        .fed-in{
+            opacity: 0;
+            transform: scale(0);
+            transition: all ease-in-out 1s;
+            
+            
+        }
+        .fed-up{
+            opacity: 1;
+            transform: scale(1);
+           
+        }
+
+    }
+}

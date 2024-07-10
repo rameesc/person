@@ -1,0 +1,19 @@
+
+
+
+
+@mixin tableView{
+    @media screen and (max-width:890px){
+        @content;
+    
+    
+    }
+
+}
+@mixin moblePhoneView{
+    @media screen and (max-width:588px){
+        
+        @content;
+    }
+}
+

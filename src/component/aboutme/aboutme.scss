@@ -1,0 +1,95 @@
+@use '../../assets/style/colors.scss' as *;
+@use '../../assets/style/mixing.scss' as *;
+
+
+.about-conatiner{
+    width: 100%;
+    
+   
+    
+   
+    .about{
+        position: relative;
+      //background-color: aqua;
+      margin: 100px 0px;
+       top: 100%;
+      
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        //background-color: aqua;
+        align-items: center;
+        position: relative;
+        h1{
+            font-weight: 800;
+           color: #F5F6F7;
+           font-size: 235px;
+           position: absolute;
+           top: -30%;
+           z-index: 0;
+          @include tableView{
+            font-size: 180px;
+            top: -20%;
+
+           }
+           @include moblePhoneView{
+            display: none;
+           }
+        }
+        .adout-me{
+           z-index: 1;
+            width: 80%;
+            display: flex;
+            justify-content:space-evenly ;
+            flex-wrap: wrap;
+            margin-top: 90px;
+            gap: 20px;
+           
+            .left{
+               // background-color: antiquewhite;
+                .about-me{
+                    font-size: 50px;
+                    font-weight: 700;
+                    color: black;
+                    @include tableView{
+                        font-size: 40px
+                    };
+
+                }
+                p{
+                    max-width: 500px;
+                    margin-top: 20px;
+                    line-height: 1.5rem;
+                   color:  $textColor;
+                }
+
+            }
+            .right{
+                .my{
+                    img{
+                        width: 400px;
+                        border-radius: 5px;
+                        @include tableView{
+                            width: 300px;
+                        }
+
+                    }
+                }
+            }
+        }
+        .about-in{
+            opacity: 0;
+            transition: all ease-in 0.8s;
+            transform: scale(0);
+           
+            
+        }
+        .about-up{
+            opacity: 1;
+            transform: scale(1);
+           
+        }
+    }
+    
+}

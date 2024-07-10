@@ -1,0 +1,120 @@
+@use '../../assets/style/colors.scss' as *;
+@use '../../assets/style/mixing.scss' as *;
+
+.hero-container{
+    position: relative;
+   
+    //z-index: 0;
+    width: 100%;
+    height: 900px;
+    background: url('../../assets/imges/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    @include moblePhoneView{
+        position: relative;
+        height: 500px;
+        background: url('../../assets/imges/banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    
+    .container{
+        position: relative;
+//background-color: aqua;
+        height: 900px;
+        @include moblePhoneView{
+            height: 500px;
+        }
+        img{
+            width: 724px;
+            height: 767px;
+            border-radius: 50%;
+            position: absolute;
+            left: -8%;
+           bottom: -10%;
+           opacity: 0.8;
+           @include moblePhoneView{
+            width: 500px;
+            height: 500px;
+           }
+
+        }
+        .its-me{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include moblePhoneView{
+                left: 50%;
+                top: 80%;
+                transform: translate(-50%,-50%);
+            }
+            h1{
+                font-size: 80px;
+              color: $white;
+             font-weight: 700;
+             line-height: 82px;
+             @include moblePhoneView{
+                //display: none;
+                font-size: 50px;
+                max-width: 80%;
+                font-weight: 700;
+                line-height: 50px;
+                
+            }
+    
+
+            }
+            .mern-stack{
+                .mern{
+                    font-size: 30px;
+                  font-weight: 400;
+                 color:$white;
+                 @include moblePhoneView{
+                    font-size: 28px;
+                    font-weight: 500;
+                    width: 100%;
+                    margin-top: 10px;
+                    line-height: 2rem;
+                    height: 100px;
+                    background-color: rgba(33, 43, 53, 0.61);
+                    padding: 5px;
+                    border-radius: 5px;
+                 }
+                 &::before{
+                    content: '';
+                    width: 100px;
+                    height: 2px;
+                    background-color: $white;
+                    position: absolute;
+                    bottom: 10px;
+                    @include moblePhoneView{
+                        bottom: 30px;
+
+                    }
+                 }
+                }
+
+            }
+
+        }
+        .grid{
+            position: absolute;
+            bottom: -10%;
+            right: 30%;
+            img{
+                width: 300px;
+                height: 300px;
+                border-radius: 0px;
+            }
+            @include moblePhoneView{
+                display: none;
+            }
+
+        }
+
+    }
+}
