@@ -38,7 +38,14 @@ const Contact = () => {
     return  alert('please fill your input')
     }
     emailjs.send(YOUR_SERVICE_ID,YOUR_TEMPLATE_ID,templateParams,publicKey).then((res)=>{
-      console.log(res)
+      
+      if(res.status==200){
+      
+          alert('message sended')
+         return setDate({message:'',name:'',email:'',subject:''})
+
+      }
+      
     }).catch((err)=>console.log(err))
 
   }
