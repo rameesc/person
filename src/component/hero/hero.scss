@@ -69,19 +69,22 @@
 
             }
             .mern-stack{
+                width: 100%;
                 .mern{
                     font-size: 30px;
                   font-weight: 400;
                  color:$white;
+                
                  @include moblePhoneView{
                     font-size: 20px;
                     font-weight: 500;
-                    width: 100%;
+                    min-width: 100%;
                     margin-top: 10px;
                     line-height: 2rem;
-                    height: 100px;
+                    //height: 100px;
+                    //background-color: red;
                     background-color: rgba(33, 43, 53, 0.61);
-                    padding: 5px;
+                    padding: 10px;
                     border-radius: 5px;
                     text-align: center;
                  }
@@ -93,7 +96,8 @@
                     position: absolute;
                     bottom: 10px;
                     @include moblePhoneView{
-                        bottom: 30px;
+                        bottom: 0px;
+                        //top: 0px;
 
                     }
                  }
