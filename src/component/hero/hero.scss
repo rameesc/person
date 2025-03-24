@@ -57,6 +57,7 @@
               color: $white;
              font-weight: 700;
              line-height: 82px;
+             background-color: red;
              @include moblePhoneView{
                 //display: none;
                 font-size: 50px;
