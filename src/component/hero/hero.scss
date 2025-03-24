@@ -57,11 +57,11 @@
               color: $white;
              font-weight: 700;
              line-height: 82px;
-             background-color: red;
+            //  background-color: red;
              @include moblePhoneView{
                 //display: none;
                 font-size: 50px;
-                max-width: 80%;
+                width: 100%;
                 font-weight: 700;
                 line-height: 50px;
                 
@@ -71,7 +71,9 @@
             }
             .mern-stack{
                 width: 100%;
+
                 .mern{
+                    
                     font-size: 30px;
                   font-weight: 400;
                  color:$white;
@@ -81,7 +83,7 @@
                     font-weight: 500;
                     min-width: 100%;
                     margin-top: 10px;
-                    line-height: 2rem;
+                    line-height: 20px;
                     //height: 100px;
                     //background-color: red;
                     background-color: rgba(33, 43, 53, 0.61);
