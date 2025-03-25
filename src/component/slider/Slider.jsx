@@ -1,6 +1,6 @@
 import React from 'react'
 import './slider.scss'
-import slider from '../../assets/imges/banner2.png'
+
 import { IoIosQuote } from "react-icons/io";
 const Slider = () => {
   return (

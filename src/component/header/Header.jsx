@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './header.scss'
-import { Link, NavLink, Outlet ,useLocation} from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 import { LuMenuSquare } from "react-icons/lu";
 import Hero from '../hero/Hero';
 
@@ -8,8 +8,7 @@ import Hero from '../hero/Hero';
 
 const Header = () => {
 
-  const {pathname}=useLocation()
-  console.log(location)
+ 
 
   const [headershow,setHeaderShow]=useState(false)
   const [menushow,SetmenuShow]=useState(true)
@@ -19,7 +18,7 @@ const scrollHandler=()=>{
    return setHeaderShow(true)
 
   }
-  setHeaderShow(true)
+  setHeaderShow(false)
 }
   useEffect(()=>{
     window.addEventListener("scroll",scrollHandler)
@@ -27,8 +26,9 @@ const scrollHandler=()=>{
 
   },[headershow])
 
+  
   const mediaQuery=window.matchMedia(`(max-width:890px)`)
-  //mediaqueryHandler
+  mediaqueryHandler
   const mediaqueryHandler=(event)=>{
     
    if(event.matches){
@@ -43,7 +43,7 @@ const scrollHandler=()=>{
     mediaQuery.addListener(mediaqueryHandler)
 
   },[])
-  console.log(screen.width)
+  
   return (
     <div className='hearder-container'>
         <div style={{position:headershow?"fixed":'absolute',background:headershow&&'black'}} className='header'>

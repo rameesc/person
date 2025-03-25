@@ -30,7 +30,7 @@ const ServiceProvided = () => {
 
   },[elementRef])
 
- console.log(visble)
+ 
   return (
     <div className='serviceprovidrd-container'>
         <div className='serviceProvided'>
